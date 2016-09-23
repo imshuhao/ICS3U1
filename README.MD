@@ -1,8 +1,9 @@
 This is the work folder for my **Gr. 11** Computer Science class, I will update this repository irregularly.
 
 ***
+Welcome to visit my [Home Page](https://ojeremy.com).
 
-This is easy, sigh.
+Stay Hungry. Stay Foolish.
 
 ***
 
