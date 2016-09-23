@@ -1,0 +1,30 @@
+% ColrDice.tu
+% K. Deuitch
+
+unit
+class ColrDice
+    inherit Dice in "dice.cla"
+    %   export setBackColour, getBackColour
+
+    % instance variables
+    %var diecolour : int := colorbg
+
+    % Methods
+    % communicators
+    body procedure setBackColour (newcolour : int)
+        diecolour := newcolour
+    end setBackColour
+
+    body function getBackColour : int
+        result diecolour
+    end getBackColour
+
+    body procedure draw
+        var x, y : int
+        determineCentre (x, y)
+        drawfillbox (x - height div 2, y - height div 2, x + height div 2, y
+            + height div 2, diecolour)
+        Dice.draw
+    end draw
+end ColrDice
+

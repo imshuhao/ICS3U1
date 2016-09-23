@@ -1,0 +1,36 @@
+% class: SolidShape
+% K. Deuitch
+
+unit
+class SolidShape
+    inherit ShapeWithCorners in "shapecor.cla"
+    export setForOutline, setForSolid, isSetForSolid
+
+    % instance variables
+    var outline_only : boolean := false
+
+    % communicators
+    procedure setForOutline
+        outline_only := true
+    end setForOutline
+    procedure setForSolid
+        outline_only := false
+    end setForSolid
+    function isSetForSolid : boolean
+        result not outline_only
+    end isSetForSolid
+    
+    body procedure erase
+        var oldcolour : int := colr
+        colr := colourbg
+        if isSetForSolid then
+            draw
+        else
+            setForSolid
+            draw
+            setForOutline
+        end if
+        colr := oldcolour
+    end erase
+
+end SolidShape

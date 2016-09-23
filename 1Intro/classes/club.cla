@@ -1,0 +1,34 @@
+% class: Club
+% file: club.cla
+
+unit
+class Club
+    inherit SolidShape in "i:/classes/solidshape.cla"
+
+    body procedure draw
+        var x, y : int
+        determineCentre (x, y)
+        var a : int := width div 10
+        var rx : int := width div 4
+        var ry : int := height div 4
+        var yval : int := round (sqrt ( - a ** 2 + 2 * a * ry))
+        var theta : int := round (arctand (sqrt ( - a ** 2 + 2 * a * ry)
+            / (rx - a)))
+        if outline_only then
+            Draw.Arc (x, y + ry, rx, ry, 0, 180, colr)
+            Draw.Arc (x - rx, y, rx, ry, 90, 360 - theta, colr)
+            Draw.Arc (x + rx, y, rx, ry, 180 + theta, 90, colr)
+            Draw.Line (x + a, y - yval, x + a, y - height div 2, colr)
+            Draw.Line (x - a, y - yval, x - a, y - height div 2, colr)
+            Draw.Line (x - a, y - height div 2, x + a, y - height div 2,
+                colr)
+        else
+            Draw.FillOval (x, y + ry, rx, ry, colr)
+            Draw.FillOval (x - rx, y, rx, ry, colr)
+            Draw.FillOval (x + rx, y, rx, ry, colr)
+            Draw.FillBox (x - a, y, x + a, y - height div 2, colr)
+        end if
+    end draw
+
+end Club
+

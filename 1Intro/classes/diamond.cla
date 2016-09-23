@@ -1,0 +1,21 @@
+% diamond class
+% filed as diamond.cla
+
+unit
+class Diamond
+    inherit SolidShape in "solidshape.cla"
+
+    body procedure draw
+        var x, y : int
+        determineCentre (x, y)
+        Draw.Line (x - width div 2, y, x, y + height div 2, colr)
+        Draw.Line (x + width div 2, y, x, y + height div 2, colr)
+        Draw.Line (x - width div 2, y, x, y - height div 2, colr)
+        Draw.Line (x + width div 2, y, x, y - height div 2, colr)
+        if not outline_only then
+            Draw.Fill (x, y, colr, colr)
+        end if
+    end draw
+
+end Diamond
+

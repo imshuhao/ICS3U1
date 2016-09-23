@@ -1,0 +1,51 @@
+% Class: basicshape
+% filed as: basicshape.cla
+% Abstract class that defines a shape with a centre and size (height)
+
+unit
+class BasicShape
+    export setCentre, getCentre, setHeight, getHeight, setColour, getColour, 
+        draw, erase
+
+    % instance variables
+    var x, y : int := 100 % coordinates of the centre of the shape
+    var height : int := 50 % overall size of the shape
+    var colr : int := black
+
+    % communicatior methods
+    procedure setCentre (newx, newy : int)
+        x := newx
+        y := newy
+    end setCentre
+    procedure getCentre (var xval, yval : int)
+        xval := x
+        yval := y
+    end getCentre
+    procedure setHeight (newsize : int)
+        if newsize > 0 then
+            height := newsize
+        end if
+    end setHeight
+    function getHeight : int
+        result height
+    end getHeight
+    procedure setColour (newcolour : int)
+        colr := newcolour
+    end setColour
+    function getColour : int
+        result colr
+    end getColour
+
+    % other methods
+
+    deferred procedure draw
+
+    procedure erase
+        var oldcolr : int := getColour
+        setColour (colourbg)
+        draw
+        setColour (oldcolr)
+    end erase
+
+end BasicShape
+

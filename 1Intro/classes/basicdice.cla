@@ -1,0 +1,111 @@
+% file: dice.cla
+% BasicDICE class
+% K. Deuitch
+
+unit
+class BasicDice
+    inherit ShapeWithCorners in "shapecor.cla"
+    export setNumber, getNumber, roll, setSize, getSize
+
+
+    % encapsulated data / instance variables
+    var number_showing : int := 1
+    width := height
+
+    % communicator methods
+    body procedure setHeight (newsize : int)
+        height := newsize
+        width := height
+    end setHeight
+
+    body procedure setWidth (newsize : int)
+        width := newsize
+        height := width
+    end setWidth
+
+    procedure setNumber (new_number : int)
+        if new_number > 0 and new_number < 7 then
+            number_showing := new_number
+        end if
+    end setNumber
+
+    function getNumber : int
+        result number_showing
+    end getNumber
+
+    procedure setSize (newSize : int)
+        setWidth (newSize)
+    end setSize
+
+    function getSize : int
+        result height
+    end getSize
+
+    % private methods
+    procedure onedot (x, y, c : int)
+        drawfilloval (x, y, height div 9, height div 9, c)
+    end onedot
+    procedure twodots (x, y, c : int)
+        drawfilloval (x - height div 3, y + height div 3, height div 9,
+            height div 9, c)
+        drawfilloval (x + height div 3, y - height div 3, height div 9,
+            height div 9, c)
+    end twodots
+    procedure threedots (x, y, c : int)
+        onedot (x, y, c)
+        twodots (x, y, c)
+    end threedots
+    procedure fourdots (x, y, c : int)
+        twodots (x, y, c)
+        drawfilloval (x - height div 3, y - height div 3, height div 9,
+            height div 9, c)
+        drawfilloval (x + height div 3, y + height div 3, height div 9,
+            height div 9, c)
+    end fourdots
+    procedure fivedots (x, y, c : int)
+        onedot (x, y, c)
+        fourdots (x, y, c)
+    end fivedots
+    procedure sixdots (x, y, c : int)
+        fourdots (x, y, c)
+        drawfilloval (x - height div 3, y, height div 9, height div 9, c)
+        drawfilloval (x + height div 3, y, height div 9, height div 9, c)
+    end sixdots
+
+    % Action Methods
+    procedure roll
+        number_showing := Rand.Int (1, 6)
+    end roll
+
+    body procedure draw
+        var x, y : int
+        determineCentre (x, y)
+        drawbox (x - height div 2, y - height div 2, x + height div 2, y
+            +
+            height div 2, colr)
+        case number_showing of
+            label 1 :
+                onedot (x, y, colr)
+            label 2 :
+                twodots (x, y, colr)
+            label 3 :
+                threedots (x, y, colr)
+            label 4 :
+                fourdots (x, y, colr)
+            label 5 :
+                fivedots (x, y, colr)
+            label 6 :
+                sixdots (x, y, colr)
+            label :
+        end case
+    end draw
+
+    body procedure erase
+        var x, y : int
+        determineCentre (x, y)
+        drawfillbox (x - height div 2, y - height div 2, x + height div
+            2, y
+            + height div 2, colorbg)
+    end erase
+end BasicDice
+

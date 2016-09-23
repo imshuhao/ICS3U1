@@ -1,0 +1,25 @@
+% heart class
+% filed as heart.cla
+
+unit
+class Heart
+    inherit SolidShape in "solidshape.cla"
+
+    body procedure draw
+	var x, y : int
+	determineCentre (x, y)
+	Draw.Arc (x - width div 4, y + height div 4, width div 4, height div
+	    4, 0, 180, colr)
+	Draw.Arc (x + width div 4, y + height div 4, width div 4, height div
+	    4, 0, 180, colr)
+	Draw.Line (x - width div 2, y + height div 4, x, y - height div 2,
+	    colr)
+	Draw.Line (x + width div 2, y + height div 4, x, y - height div 2,
+	    colr)
+	if not outline_only then
+	    Draw.Fill (x, y - 1, colr, colr)
+	end if
+    end draw
+
+end Heart
+

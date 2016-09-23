@@ -1,0 +1,37 @@
+% class: Spade
+% file: spade.cla
+
+unit
+class Spade
+    inherit SolidShape in "i:/classes/solidshape.cla"
+
+    body procedure draw
+        var x, y : int
+        determineCentre (x, y)
+        var a : int := width div 10
+        var rx : int := width div 4
+        var ry : int := height div 4
+        var yval : int := round (sqrt ( - a ** 2 + 2 * a * ry))
+        var theta : int := round (arctand (sqrt ( - a ** 2 + 2 * a * ry)
+            / (rx - a)))
+        if outline_only then
+            Draw.Line (x, y + height div 2, x + width div 2, y, colr)
+            Draw.Line (x, y + height div 2, x - width div 2, y, colr)
+            Draw.Arc (x + rx, y, rx, ry, 180 + theta, 360, colr)
+            Draw.Arc (x - rx, y, rx, ry, 180, 360 - theta, colr)
+            Draw.Line (x - a, y - yval, x - a, y - height div 2, colr)
+            Draw.Line (x + a, y - yval, x + a, y - height div 2, colr)
+            Draw.Line (x - a, y - height div 2, x + a, y - height div 2, 
+                colr)
+        else
+            Draw.Line (x, y + height div 2, x + width div 2, y, colr)
+            Draw.Line (x, y + height div 2, x - width div 2, y, colr)
+            Draw.FillArc (x + rx, y, rx, ry, 180, 360, colr)
+            Draw.FillArc (x - rx, y, rx, ry, 180, 360, colr)
+            Draw.FillBox (x - a, y, x + a, y - height div 2, colr)
+            Draw.Fill (x, y + 1, colr, colr)
+        end if
+    end draw
+
+end Spade
+

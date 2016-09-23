@@ -1,0 +1,102 @@
+% Class: ShapeWithCorners
+% filed as: ShapeCorners.cla
+% Abstract class that defines a shape with a centre and size (Width and Height)
+
+unit
+class ShapeWithCorners
+    inherit BasicShape in "basicshape.cla"
+    export setWidth, getWidth, setLLCorner, getLLCorner, setULCorner,
+        getULCorner, setURCorner, getURCorner, setLRCorner, getLRCorner
+
+    % instance variables
+    var width : int := 20 % height inherited
+    var whichcorner : string (1) := "c" % one of 'abcde'
+
+    % communicatior methods
+    % for height, width, centre
+    procedure setWidth (newsize : int)
+        width := newsize
+    end setWidth
+    function getWidth : int
+        result width
+    end getWidth
+
+    % private method
+    procedure determineCentre (var xc, yc : int)
+        case whichcorner of
+            label "a" : % upper left corner
+                xc := x + width div 2
+                yc := y - height div 2
+            label "b" : % upper right corner
+                xc := x - width div 2
+                yc := y - height div 2
+            label "c" : % centre
+                xc := x
+                yc := y
+            label "d" : % lower left corner
+                xc := x + width div 2
+                yc := y + height div 2
+            label "e" : % lower right corner
+                xc := x - width div 2
+                yc := y + height div 2
+        end case
+    end determineCentre
+
+    % communicator methods to set the 4 corners of the shape
+    procedure setLLCorner (newx, newy : int)
+        whichcorner := "d"
+        x := newx
+        y := newy
+    end setLLCorner
+    procedure getLLCorner (var xval, yval : int)
+        var a, b : int
+        determineCentre (a, b)
+        xval := a - width div 2
+        yval := b - height div 2
+    end getLLCorner
+    procedure setULCorner (newx, newy : int)
+        whichcorner := "a"
+        x := newx
+        y := newy
+    end setULCorner
+    procedure getULCorner (var xval, yval : int)
+        var a, b : int
+        determineCentre (a, b)
+        xval := a - width div 2
+        yval := b + height div 2
+    end getULCorner
+    procedure setURCorner (newx, newy : int)
+        whichcorner := "b"
+        x := newx
+        y := newy
+    end setURCorner
+    procedure getURCorner (var xval, yval : int)
+        var a, b : int
+        determineCentre (a, b)
+        xval := a + width div 2
+        yval := b + height div 2
+    end getURCorner
+    procedure setLRCorner (newx, newy : int)
+        whichcorner := "e"
+        x := newx
+        y := newy
+    end setLRCorner
+    procedure getLRCorner (var xval, yval : int)
+        var a, b : int
+        determineCentre (a, b)
+        xval := a + width div 2
+        yval := b - height div 2
+    end getLRCorner
+
+    body procedure setCentre (newx, newy : int)
+        whichcorner := "c"
+        BasicShape.setCentre(newx,newy)
+    end setCentre
+    body procedure getCentre (var xval, yval : int)
+        var a, b : int
+        determineCentre (a, b)
+        xval := a
+        yval := b
+    end getCentre
+end ShapeWithCorners
+
