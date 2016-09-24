@@ -1,4 +1,4 @@
-import Dice in "H:/_ICS3U1_WorkFolder/1Intro/classes/Dice.cla"
+import Dice in "classes/Dice.cla"
 setscreen("graphics:640;480")
 % Declaration of program work variables
 var iColour, iPixelX, iPixelY, iSize, iSpots : int
