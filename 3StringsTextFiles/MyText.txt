@@ -1,0 +1,13 @@
+The cat
+    in the
+
+    
+hat.
+
+Note: There are blank lines above and after this line. Some have tabs.
+
+There are xx tokens (words), yy lines and zz non-blank lines in this file.
+
+
+
+	
