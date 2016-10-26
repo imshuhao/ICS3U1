@@ -376,7 +376,6 @@ fcn getMaxWordLength (filename : string) : int
 end getMaxWordLength
 
 fcn stringIndex (text, word : string) : int
-    var total := 0
     var pos := index (text, word)
     if pos > 0 then
 	result stringIndex (text (pos + 1 .. *), word) + 1
