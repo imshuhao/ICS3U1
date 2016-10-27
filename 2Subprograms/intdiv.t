@@ -1,6 +1,6 @@
 proc intdiv (a,b:int, var q,r : int)
     q := a div b
-    r := a-q*b
+    r := a mod b
 end intdiv
 
 var m,n,q,r : int := 0
