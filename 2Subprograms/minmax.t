@@ -1,13 +1,9 @@
 proc sort2 (x, y : int, var maxn, minn : int)
-    if x > y then
 	maxn := x
 	minn := y
-    elsif x < y then
+    if x < y then
 	maxn := y
 	minn := x
-    else
-	maxn := x
-	minn := y
     end if
 end sort2
 
