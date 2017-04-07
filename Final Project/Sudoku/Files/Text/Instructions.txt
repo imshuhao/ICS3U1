@@ -1,0 +1,6 @@
+The instructions are:
+
+1. Select one grid.
+2. Enter a number for that grid.
+3. You win the game when each column, each row, and each of the nine 3¡Á3 sub-grids that compose the grid contains all of the digits from 1 to 9.
+4. You lose the game when the countdown ends.
