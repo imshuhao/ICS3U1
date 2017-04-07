@@ -1,0 +1,176 @@
+*** ENVIRONMENT CRASH ***
+
+Date: Nov 22 2016 2:42 PM
+
+File Name: C:\Program Files\Open Turing\turing.exe
+Version: 1.0.1  [11]
+File Size: 4573696
+File Date: Jun 11 2012 11:35 PM
+Operating System: After Windows XP
+JVM: Ready Built-in JRE (1.4.2 or later)
+"assert" Statements: disabled
+
+
+Cause of Crash: Access Violation
+
+Previous Operations:
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+  CMD: WM_ACTIVATE (W)
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 -2
+    Object Allocated 11 -1
+    Create standard error window
+    MIOWin_CreateWindowFromAttribs (Standard Error)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner text win
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 0
+    View/Window.Set called (graphics:1920;1080)
+    MIOWin_CreateWindowFromAttribs (strtext4 Run Window)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+    MIOWin_InitializeWindow: Window initialized
+    Substitute Run Window 190424 2400c0 (graphics:1920;1080)
+    Run Window Added 2400c0 
+    Debugger Notify Finalize Run
+    Notify All Run Windows Closed
+  CMD: WM_ACTIVATE (W)
+    Object Freed -1
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 1e1a280 - L: 80 - C: 130
+    Text - sz:122:3004 - slFr:80:139:1997 - slTo:80:139:1997 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Set Selection (2) - sz:122:3004 - slFr:1988 - slTo:1988 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 1e1a280 - L: 80 - C: 130 (x1)
+    Text - sz:122:3004 - slFr:80:130:1988 - slTo:80:130:1988 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_SETFOCUS (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: 103da - Ex: 1 - Args: 0 - Step: 0
+    Turing Language Freeing Memory
+    MIO_Init_Free called
+    Object Freed 0
+    Debugger Notify Init Run
+    Deallocating object 0 (free=1)
+    Deallocating object -1 (free=1)
+    Deallocating object -2 (free=1)
+    MIO_Init_Run called
+    MIO_Init_Free called
+    Debugger Notify Init Run
+    Create standard input/output window
+    MIOWin_CreateWindowFromAttribs (No Title)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+  CMD: WM_ACTIVATE (W)
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 -2
+    Object Allocated 11 -1
+    Create standard error window
+    MIOWin_CreateWindowFromAttribs (Standard Error)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner text win
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 0
+    View/Window.Set called (graphics:1920;1080)
+    MIOWin_CreateWindowFromAttribs (strtext4 Run Window)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+    MIOWin_InitializeWindow: Window initialized
+    Substitute Run Window 1d03fa 1a0424 (graphics:1920;1080)
+    Run Window Added 1a0424 
+    Debugger Notify Finalize Run
+    Notify All Run Windows Closed
+  CMD: WM_ACTIVATE (W)
+    Object Freed -1
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 1e1a280 - L: 80 - C: 133
+    Text - sz:122:3004 - slFr:80:130:1988 - slTo:80:130:1988 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Set Selection (2) - sz:122:3004 - slFr:1991 - slTo:1991 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 1e1a280 - L: 80 - C: 133 (x1)
+    Text - sz:122:3004 - slFr:80:133:1991 - slTo:80:133:1991 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 1e1a280 - L: 80 - C: 79
+    Text - sz:122:3004 - slFr:1991 - slTo:1991 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Set Selection (2) - sz:122:3004 - slFr:1937 - slTo:1937 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 1e1a280 - L: 80 - C: 79 (x1)
+    Text - sz:122:3004 - slFr:80:79:1937 - slTo:80:79:1937 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONDOWN (D)
+    Set Selection (1) - Text: 1e1a280 - L: 80 - C: 107
+    Text - sz:122:3004 - slFr:1937 - slTo:1937 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Set Selection (2) - sz:122:3004 - slFr:1965 - slTo:1965 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Extend Selection - Text: 1e1a280 - L: 80 - C: 140 (x57)
+    Text - sz:122:3004 - slFr:1965 - slTo:1998 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_LBUTTONUP (D)
+    Extend Selection - Text: 1e1a280 - L: 80 - C: 140 (x1)
+    Text - sz:122:3004 - slFr:1965 - slTo:1998 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+  CMD: WM_INITMENU (W)
+  CMD: COMMAND_CUT
+    Cut/Copy (1) - Window: 103da - Cut: 1
+    Cut/Copy (2) - from:80:107:1965 - to:80:140:1998 - lines:1 - nla: 122
+    Delete Selection (1) - Text: 1e1a280
+    Text - sz:122:3004 - slFr:80:107:1965 - slTo:80:140:1998 - nlA:0
+    Line Starts: 119:2939 120:2940 121:2972 122:3004
+    Delete Selection (2) - From line: 80 - From col: 107 - To line: 80 - To col: 140
+    Delete Selection (3) - sz:122:2971 - slFr:1965 - slTo:1965 - nlA:0
+    Line Starts: 119:2906 120:2907 121:2939 122:2971
+  CMD: WM_SETFOCUS (W)
+  CMD: COMMAND_RUN
+    Run (1) - Window: 103da - Ex: 1 - Args: 0 - Step: 0
+    Turing Language Freeing Memory
+    MIO_Init_Free called
+    Object Freed 0
+    Debugger Notify Init Run
+    Deallocating object 0 (free=1)
+    Deallocating object -1 (free=1)
+    Deallocating object -2 (free=1)
+    MIO_Init_Run called
+    MIO_Init_Free called
+    Debugger Notify Init Run
+    Create standard input/output window
+    MIOWin_CreateWindowFromAttribs (No Title)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+  CMD: WM_ACTIVATE (W)
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 -2
+    Object Allocated 11 -1
+    Create standard error window
+    MIOWin_CreateWindowFromAttribs (Standard Error)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner text win
+    MIOWin_InitializeWindow: Window initialized
+    Object Allocated 11 0
+    View/Window.Set called (graphics:1920;1080)
+    MIOWin_CreateWindowFromAttribs (strtext4 Run Window)
+    MIOWin_InitializeWindow: Create button bar
+    MIOWin_InitializeWindow: Create inner grph win
+    MIOWin_InitializeWindow: Window initialized
+    Substitute Run Window 1d0422 1e03fa (graphics:1920;1080)
+    Run Window Added 1e03fa 
+  CMD: MIO_COMMAND_PAUSE_RESUME
+    Pause Execution from Run Window
+
+
+Registers
+  EAX=00000000  EBX=001E03FA  ECX=00000000  EDX=0012ADEC  ESI=001E03FA
+  EDI=00000111  EBP=0012B1F4  ESP=0012ADD8  EIP=00442120  FLG=00210246
+  CS=001B  DS=0023  SS=0023  ES=0023  FS=003B  GS=0000
+
+Not enough space for modules.
+
+------------------------------------------------------

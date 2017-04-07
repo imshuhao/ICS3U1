@@ -1,0 +1,66 @@
+Word			Ascii Code			Pig Latin			No Vowels			All Caps			Reversed
+
+The			84-104-101			eThay			Th			THE			ehT
+
+cat			99-97-116			atcay			ct			CAT			tac
+
+in			105-110			niay			n			IN			ni
+
+the			116-104-101			ethay			th			THE			eht
+
+hat.			104-97-116-46			at.hay			ht.			HAT.			.tah
+
+Note:			78-111-116-101-58			ote:Nay			Nt:			NOTE:			:etoN
+
+There			84-104-101-114-101			ereThay			Thr			THERE			erehT
+
+are			97-114-101			reaay			r			ARE			era
+
+blank			98-108-97-110-107			ankblay			blnk			BLANK			knalb
+
+lines			108-105-110-101-115			ineslay			lns			LINES			senil
+
+above			97-98-111-118-101			boveaay			bv			ABOVE			evoba
+
+and			97-110-100			ndaay			nd			AND			dna
+
+after			97-102-116-101-114			fteraay			ftr			AFTER			retfa
+
+this			116-104-105-115			isthay			ths			THIS			siht
+
+line.			108-105-110-101-46			ine.lay			ln.			LINE.			.enil
+
+Some			83-111-109-101			omeSay			Sm			SOME			emoS
+
+have			104-97-118-101			avehay			hv			HAVE			evah
+
+tabs.			116-97-98-115-46			abs.tay			tbs.			TABS.			.sbat
+
+There			84-104-101-114-101			ereThay			Thr			THERE			erehT
+
+are			97-114-101			reaay			r			ARE			era
+
+xx			120-120			xxay			xx			XX			xx
+
+tokens			116-111-107-101-110-115			okenstay			tkns			TOKENS			snekot
+
+(words),			40-119-111-114-100-115-41-44			ords),(way			(wrds),			(WORDS),			,)sdrow(
+
+yy			121-121			yyay			yy			YY			yy
+
+lines			108-105-110-101-115			ineslay			lns			LINES			senil
+
+and			97-110-100			ndaay			nd			AND			dna
+
+zz			122-122			zzay			zz			ZZ			zz
+
+non-blank			110-111-110-45-98-108-97-110-107			on-blanknay			nn-blnk			NON-BLANK			knalb-non
+
+lines			108-105-110-101-115			ineslay			lns			LINES			senil
+
+in			105-110			niay			n			IN			ni
+
+this			116-104-105-115			isthay			ths			THIS			siht
+
+file.			102-105-108-101-46			ile.fay			fl.			FILE.			.elif
+

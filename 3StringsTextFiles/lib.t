@@ -163,17 +163,22 @@ fcn FtoS (filename : string) : string
     result file
 end FtoS
 
-proc StoF (filename, str : string, stream : int)
+proc StoF (filename, str : string)
 %Creates a new text file
-var sWord : string
-var s := stream
-%var value := FtoS(filename)
-
+var s : int
 open : s, filename, put
-s := stream
 put : s, str
 close : s
 end StoF
+
+proc modF (filename, str : string)
+%Creates a new text file
+var s : int
+open : s, filename, put, mod, seek
+seek : s, *
+put : s, str
+close : s
+end modF
 
 proc displayWords (filename : string)
     var sWord : string
@@ -346,3 +351,33 @@ end stringIndex
 fcn searchWord (filename, word : string) : int
     result stringIndex (FtoS (filename), word)
 end searchWord
+
+%level 2
+fcn isInt (str : string) : boolean
+    var l := length (str)
+    var is := true
+    if l = 0 then
+	result false
+    elsif l = 1 then
+	if ord (str (1)) < 48 or ord (str (1)) > 57 then
+	    is := false
+	end if
+    else
+	if (ord (str (1)) < 48 or ord (str (1)) > 57) xor (ord (str (1)) = 43 or ord (str (1)) = 45) then
+	    is := false
+	end if
+	for i : 2 .. l
+	    if ord (str (i)) < 48 or ord (str (i)) > 57 then
+		is := false
+	    end if
+	end for
+    end if
+    result is
+end isInt
+
+fcn addInt (str1, str2 : string) : string
+    if isInt (str1) = isInt (str2) = true then
+	result intstr (strint (str1) + strint (str2))
+    end if
+    result "error"
+end addInt
