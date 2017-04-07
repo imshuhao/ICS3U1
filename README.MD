@@ -1,4 +1,4 @@
-This is the work folder for my **Gr. 11** Computer Science class, I will update this repository irregularly.
+This is the work folder for my **Gr. 11** Computer Science class at Markville Secondary School.
 
 ***
 
