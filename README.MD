@@ -1,4 +1,4 @@
-This is the work folder for my **Gr. 11** ~~(sigh)~~ Computer Science class, I will update this repository irregularly.
+This is the work folder for my **Gr. 11** Computer Science class, I will update this repository irregularly.
 
 ***
 
@@ -16,7 +16,7 @@ Unit List:
 *	Arrays
 *	Computer And Society
 *	~~Exam Review~~
-*	~~Final Project~~
+*	Final Project
 
 ***
 
